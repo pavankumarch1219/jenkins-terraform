@@ -5,16 +5,7 @@ pipeline {
         TF_IN_AUTOMATION = "true"
     }
 
-    stages {
-
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main',
-                url: https://github.com/pavankumarch1219/jenkins-terraform.git''
-            }
-        }
-
-        stage('Terraform Init') {
+      stage('Terraform Init') {
             steps {
                 sh 'terraform init'
             }
